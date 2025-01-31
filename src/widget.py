@@ -1,8 +1,8 @@
-from src.masks import get_mask_card_number, get_mask_account
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(account_type_card_num: str) -> str:
-    """ Функция, которая умеет обрабатывать информацию как о картах, так и о счетах"""
+    """Функция, которая умеет обрабатывать информацию как о картах, так и о счетах"""
     account_type_card_num_list = account_type_card_num.split(" ")
     if len(account_type_card_num_list[-1]) < 20 and len(account_type_card_num) > 16:
         mask_card_number = get_mask_card_number(account_type_card_num_list[-1])
@@ -17,12 +17,9 @@ def mask_account_card(account_type_card_num: str) -> str:
     return "Некорректный ввод данных"
 
 
-print(mask_account_card("Visa Platinum 7000792289606361"))
-print(mask_account_card("Maestro 1596837868705199"))
-print(mask_account_card("Счет 64686473678894779589"))
-print(mask_account_card("Счёт 12345123451234512345"))
-print(mask_account_card("Visa Classic 6831982476737658"))
-print(mask_account_card("Visa Platinum 8990922113665229"))
-print(mask_account_card("Visa Gold 5999414228426353"))
-print(mask_account_card("Счет 73654108430135874305"))
-
+def get_date(type_time: str) -> str:
+    """Функция, которая возвращает строку с датой в формате
+    "ДД.ММ.ГГГГ" """
+    if len(type_time) != 26:
+        return "Некорректный ввод"
+    return f"{type_time[8:10]}.{type_time[5:7]}.{type_time[0:4]}"
