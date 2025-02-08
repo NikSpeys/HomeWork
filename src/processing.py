@@ -1,6 +1,7 @@
 def filter_by_state(date: list[dict[str, any]], state: str = "EXECUTED") -> list[dict[str, any]]:
-    executed_items = list(dict(filter(filter_by_state, state)))
-    return executed_items
+    # executed_items = list(dict(filter(filter_by_state(state))))
+    filtered_list = list(filter(lambda x: x["state"] == "EXECUTED", date))
+    return filtered_list
 
 
 print(filter_by_state(
@@ -10,5 +11,5 @@ print(filter_by_state(
      {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"}]))
 
 
-def sort_by_date():
+def sort_by_date(date: list[dict[str, any]], reverse: bool = True) -> list[dict[str, any]]:
     pass
