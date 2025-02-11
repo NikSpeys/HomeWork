@@ -6,8 +6,6 @@ def filter_by_state(data_list: list, state: str = "EXECUTED") -> list:
     for item in data_list:
         if item.get("state") == state:
             filter_item.append(item)
-        if "state" not in item:
-            return data_list
     return filter_item
 
 
