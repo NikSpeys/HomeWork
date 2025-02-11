@@ -14,5 +14,4 @@ def get_mask_account(mask_account: str) -> str:
         return f"**{mask_account[16:]}"
     return "Номер счёта введён не корректно"
 
-
 # print(get_mask_account("73654108430135874305"))
