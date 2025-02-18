@@ -1,10 +1,9 @@
 import pytest
 
-from src.masks import get_mask_card_number, get_mask_account
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def test_get_mask_card_number():
-    """Тест проверки работы функции маскировки номера банковских карт"""
+def test_get_mask_card_number() -> None:
     assert get_mask_card_number("7000792289606361") == "7000 79** **** 6361"
     with pytest.raises(ValueError):
         get_mask_card_number("5413242214")
@@ -16,8 +15,7 @@ def test_get_mask_card_number():
         get_mask_card_number("")
 
 
-def test_get_mask_account():
-    """Тест проверки работы функции маскировки номера банковского счёта"""
+def test_get_mask_account() -> None:
     assert get_mask_account("73654108430135874305") == "**4305"
     with pytest.raises(ValueError):
         get_mask_account("99992.9dfgddg92")
