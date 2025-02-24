@@ -1,6 +1,6 @@
 import pytest
 
-from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
+from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 
 @pytest.fixture
@@ -53,6 +53,7 @@ def transactions():
         },
     ]
 
+
 @pytest.fixture
 def transactions_usd():
     return [
@@ -83,7 +84,6 @@ def transactions_usd():
             "from": "Visa Classic 6831982476737658",
             "to": "Visa Platinum 8990922113665229",
         },
-
     ]
 
 
