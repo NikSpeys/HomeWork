@@ -9,9 +9,7 @@ def my_function(x, y):
 def test_log_print(capsys):
     my_function(10, 5)
     captured = capsys.readouterr()
-    expected_output = "my_function started\n" \
-                      "my_function ok\n" \
-                      "my_function finished\n"
+    expected_output = "my_function started\n" "my_function ok\n" "my_function finished\n"
     assert captured.out == expected_output
 
 
