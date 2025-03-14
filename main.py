@@ -1,7 +1,10 @@
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
-from src.masks import get_mask_account, get_mask_card_number
+
+# from src.masks import get_mask_account, get_mask_card_number
 from src.processing import filter_by_state, sort_by_date
 from src.widget import get_date, mask_account_card
+
+# from src.utils import load_transactions_from_json, transaction_amount
 
 print(get_date("2024-03-11T02:26:18.671407"))
 print(mask_account_card("Visa Platinum 7000792289606361"))
@@ -14,7 +17,6 @@ print(mask_account_card("Visa Gold 5999414228426353"))
 print(mask_account_card("Счет 73654108430135874305"))
 print(get_mask_card_number("7000792289606361"))
 print(get_mask_card_number("9012932890606361"))
-print(get_mask_card_number("1203142289606361"))
 print(get_mask_account("73654108430135874305"))
 print(
     filter_by_state(

@@ -45,6 +45,10 @@
 
 ```pytest --cov=src --cov-report=html```
 
+## Логирование
++ Файлы логов записываются в папку ```logs```
++ Для модуля ```masks.py``` - ```masks.log```
++ Для модуля ```utils.py``` - ```utils.log```
 ## Команда проекта
 
 + Потапов Никита — Back-End developer
