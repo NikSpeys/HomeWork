@@ -1,5 +1,12 @@
+
+import os
 import logging
 
+log_dir = "../logs/"
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
+file_handler = logging.FileHandler(os.path.join(log_dir, "masks.log"), "a", encoding="utf-8")
 logger = logging.getLogger("masks")
 file_handler = logging.FileHandler("../logs/masks.log", "a", encoding="utf-8")
 file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
@@ -29,5 +36,5 @@ def get_mask_account(mask_account: str) -> str:
     raise ValueError("Номер счёта введён не корректно")
 
 
-print(get_mask_card_number("1203142289606361"))
-print(get_mask_account("73654108430135874305"))
+# print(get_mask_card_number("1203142289606361"))
+# print(get_mask_account("73654108430135874305"))

@@ -21,5 +21,5 @@ def read_transactions_excel(file_excel: str) -> list[dict]:
         return excel_file_read
 
 
-print(read_transactions_csv("..//data/transactions.csv"))
-print(read_transactions_excel("..//data/transactions_excel.xlsx"))
+# print(read_transactions_csv("..//data/transactions.csv"))
+# print(read_transactions_excel("..//data/transactions_excel.xlsx"))
